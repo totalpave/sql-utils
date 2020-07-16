@@ -1,0 +1,41 @@
+{
+  "name": "@totalpave/sql-utils",
+  "version": "0.2.2",
+  "description": "SQL Utils library",
+  "main": "lib/api.js",
+  "types": "lib/api.d.ts",
+  "scripts": {
+    "lint": "node --max_old_space_size=6144 ./node_modules/eslint/bin/eslint.js --ext .ts '?(src|spec)/**/*.ts' --cache",
+    "build": "npm run lint && tsc",
+    "test": "npm run-script lint && nyc --reporter=lcov --reporter=text ts-node ./spec/support/jasmine.ts",
+    "docs": "typedoc --options typedoc.json",
+    "prepublishOnly": "npm run-script build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/totalpave/sql-utils.git"
+  },
+  "author": "norman.breau@totalpave.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/totalpave/sql-utils/issues"
+  },
+  "homepage": "https://github.com/totalpave/sql-utils#readme",
+  "devDependencies": {
+    "@totalpave/eslint-plugin": "3.0.1",
+    "@types/jasmine": "3.5.10",
+    "@typescript-eslint/eslint-plugin": "2.8.0",
+    "@typescript-eslint/parser": "2.8.0",
+    "eslint": "7.1.0",
+    "jasmine": "3.5.0",
+    "jasmine-spec-reporter": "4.2.1",
+    "nyc": "15.0.1",
+    "ts-node": "8.10.1",
+    "tsutils": "3.17.1",
+    "typedoc": "0.15.2",
+    "typescript": "3.7.2"
+  },
+  "dependencies": {
+    "@types/node": "14.0.5"
+  }
+}
