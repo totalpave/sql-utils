@@ -1,3 +1,5 @@
+import { SQLBoolean } from './SQLBoolean';
+
 export class SQLUtils {
     private constructor() {}
     public static toDatetime(date: Date): string {
@@ -33,5 +35,17 @@ export class SQLUtils {
         }
         
         return `${date.getFullYear()}-${monthString}-${dayString} ${hourString}:${minuteString}:${secondString}.${msString}`;
+    }
+
+    public static castToBoolean(value: SQLBoolean): boolean {
+        switch (value) {
+            case 0:
+            case "0":
+                return false;
+            case 1:
+            case "1":
+                return true;
+            default: return false;
+        }
     }
 }

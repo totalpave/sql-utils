@@ -12,7 +12,8 @@
         "moduleResolution": "node",
         "baseUrl": "./",
         "plugins": [],
-        "incremental": true
+        "incremental": true,
+        "downlevelIteration": true
     },
     "exclude": [
         "**/*.spec.ts",
