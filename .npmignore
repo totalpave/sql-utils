@@ -9,3 +9,5 @@ nyc.config.js
 typedoc.json
 tsconfig*
 .eslintrc.js
+jest.config.ts
+*.tgz
