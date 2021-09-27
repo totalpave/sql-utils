@@ -1,4 +1,4 @@
-[@totalpave/sql-utils - v0.0.0](../README.md) / [Exports](../modules.md) / [SQLUtils](../modules/SQLUtils.md) / SQLUtils
+[@totalpave/sql-utils - v1.0.0](../README.md) / [Exports](../modules.md) / [SQLUtils](../modules/SQLUtils.md) / SQLUtils
 
 # Class: SQLUtils
 
@@ -8,9 +8,30 @@
 
 ### Methods
 
+- [castToBoolean](SQLUtils.SQLUtils-1.md#casttoboolean)
 - [toDatetime](SQLUtils.SQLUtils-1.md#todatetime)
 
 ## Methods
+
+### castToBoolean
+
+▸ `Static` **castToBoolean**(`value`): `boolean`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `value` | [`SQLBoolean`](../modules/SQLBoolean.md#sqlboolean) |
+
+#### Returns
+
+`boolean`
+
+#### Defined in
+
+[SQLUtils.ts:40](https://github.com/totalpave/sql-utils/blob/a99d9bb/src/SQLUtils.ts#L40)
+
+___
 
 ### toDatetime
 
@@ -28,4 +49,4 @@
 
 #### Defined in
 
-[SQLUtils.ts:3](https://github.com/totalpave/sql-utils/blob/4c29d1f/src/SQLUtils.ts#L3)
+[SQLUtils.ts:5](https://github.com/totalpave/sql-utils/blob/a99d9bb/src/SQLUtils.ts#L5)
