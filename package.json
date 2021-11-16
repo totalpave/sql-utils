@@ -1,6 +1,6 @@
 {
   "name": "@totalpave/sql-utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "SQL Utils library",
   "main": "lib/api.js",
   "types": "lib/api.d.ts",
