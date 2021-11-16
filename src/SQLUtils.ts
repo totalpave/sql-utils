@@ -37,6 +37,15 @@ export class SQLUtils {
         return `${date.getFullYear()}-${monthString}-${dayString} ${hourString}:${minuteString}:${secondString}.${msString}`;
     }
 
+    /**
+     * Takes an SQLBoolean (0, 1, "0", or "1") and converts it to a boolean true or boolean false value.
+     * 
+     * If the given value is not an SQLBoolean, then no cast is done.
+     * If the given value is null/undefined, then null is returned.
+     * 
+     * @param value 
+     * @returns 
+     */
     public static castToBoolean(value: SQLBoolean): boolean {
         switch (value) {
             case 0:
@@ -45,7 +54,14 @@ export class SQLUtils {
             case 1:
             case "1":
                 return true;
-            default: return false;
+            case null:
+            case undefined:
+                return null;
+            default:
+                // Should never reach here, if you do, then you aren't conforming to API signature.
+                // eslint-disable-next-line no-console
+                console.warn('Unexpected default case reached while casting SQLBoolean to boolean');
+                return value;
         }
     }
 }

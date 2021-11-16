@@ -51,19 +51,29 @@ describe('SQLUtils', () => {
         expectations.set("0", false);
         expectations.set("1", true);
 
-        for (let [ k, v ] of expectations) {
-            it(`${k} (${typeof k}) should be ${v}`, () => {
-                expect(SQLUtils.castToBoolean(k)).toBe(v);
+        jest.spyOn(console, 'warn').mockImplementation(() => {});
+
+        for (let [ k, isTrue ] of expectations) {
+            it(`${k} (${typeof k}) should be ${isTrue}`, () => {
+                expect(SQLUtils.castToBoolean(k)).toBe(isTrue);
             });
         }
 
-        it('arbitrary strings simply return false', () => {
-            expect(SQLUtils.castToBoolean(<any>"asdfadsf")).toBe(false);
+        it('arbitrary strings simply return itself', () => {
+            expect(SQLUtils.castToBoolean(<any>"asdfadsf")).toBe("asdfadsf");
         });
 
-        it('numbers other than 0 or 1 simply return false', () => {
-            expect(SQLUtils.castToBoolean(<any>-123)).toBe(false);
-            expect(SQLUtils.castToBoolean(<any>123)).toBe(false);
+        it('null should be preserved', () => {
+            expect(SQLUtils.castToBoolean(null)).toBe(null);
+        });
+
+        it('undefined should return null', () => {
+            expect(SQLUtils.castToBoolean(undefined)).toBe(null);
+        });
+
+        it('numbers other than 0 or 1 simply return itself', () => {
+            expect(SQLUtils.castToBoolean(<any>-123)).toBe(-123);
+            expect(SQLUtils.castToBoolean(<any>123)).toBe(123);
         });
     });
 });
