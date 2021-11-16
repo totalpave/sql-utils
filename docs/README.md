@@ -1,4 +1,4 @@
-@totalpave/sql-utils - v1.0.0 / [Exports](modules.md)
+@totalpave/sql-utils - v1.0.1 / [Exports](modules.md)
 
 # @totalpave/object
 

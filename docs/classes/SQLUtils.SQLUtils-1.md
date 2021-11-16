@@ -1,4 +1,4 @@
-[@totalpave/sql-utils - v1.0.0](../README.md) / [Exports](../modules.md) / [SQLUtils](../modules/SQLUtils.md) / SQLUtils
+[@totalpave/sql-utils - v1.0.1](../README.md) / [Exports](../modules.md) / [SQLUtils](../modules/SQLUtils.md) / SQLUtils
 
 # Class: SQLUtils
 
@@ -17,6 +17,11 @@
 
 ▸ `Static` **castToBoolean**(`value`): `boolean`
 
+Takes an SQLBoolean (0, 1, "0", or "1") and converts it to a boolean true or boolean false value.
+
+If the given value is not an SQLBoolean, then no cast is done.
+If the given value is null/undefined, then null is returned.
+
 #### Parameters
 
 | Name | Type |
@@ -29,7 +34,7 @@
 
 #### Defined in
 
-[SQLUtils.ts:40](https://github.com/totalpave/sql-utils/blob/a99d9bb/src/SQLUtils.ts#L40)
+[SQLUtils.ts:49](https://github.com/totalpave/sql-utils/blob/310e81e/src/SQLUtils.ts#L49)
 
 ___
 
@@ -49,4 +54,4 @@ ___
 
 #### Defined in
 
-[SQLUtils.ts:5](https://github.com/totalpave/sql-utils/blob/a99d9bb/src/SQLUtils.ts#L5)
+[SQLUtils.ts:5](https://github.com/totalpave/sql-utils/blob/310e81e/src/SQLUtils.ts#L5)
