@@ -1,4 +1,4 @@
-[@totalpave/sql-utils - v1.0.1](../README.md) / [Exports](../modules.md) / SQLBoolean
+[@totalpave/sql-utils - v1.0.2](../README.md) / [Exports](../modules.md) / SQLBoolean
 
 # Module: SQLBoolean
 
@@ -16,4 +16,4 @@
 
 #### Defined in
 
-[SQLBoolean.ts:2](https://github.com/totalpave/sql-utils/blob/310e81e/src/SQLBoolean.ts#L2)
+[SQLBoolean.ts:2](https://github.com/totalpave/sql-utils/blob/6459c65/src/SQLBoolean.ts#L2)

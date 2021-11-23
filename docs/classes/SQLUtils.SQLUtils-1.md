@@ -1,4 +1,4 @@
-[@totalpave/sql-utils - v1.0.1](../README.md) / [Exports](../modules.md) / [SQLUtils](../modules/SQLUtils.md) / SQLUtils
+[@totalpave/sql-utils - v1.0.2](../README.md) / [Exports](../modules.md) / [SQLUtils](../modules/SQLUtils.md) / SQLUtils
 
 # Class: SQLUtils
 
@@ -34,7 +34,7 @@ If the given value is null/undefined, then null is returned.
 
 #### Defined in
 
-[SQLUtils.ts:49](https://github.com/totalpave/sql-utils/blob/310e81e/src/SQLUtils.ts#L49)
+[SQLUtils.ts:49](https://github.com/totalpave/sql-utils/blob/6459c65/src/SQLUtils.ts#L49)
 
 ___
 
@@ -54,4 +54,4 @@ ___
 
 #### Defined in
 
-[SQLUtils.ts:5](https://github.com/totalpave/sql-utils/blob/310e81e/src/SQLUtils.ts#L5)
+[SQLUtils.ts:5](https://github.com/totalpave/sql-utils/blob/6459c65/src/SQLUtils.ts#L5)

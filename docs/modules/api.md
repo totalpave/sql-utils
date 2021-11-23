@@ -1,4 +1,4 @@
-[@totalpave/sql-utils - v1.0.1](../README.md) / [Exports](../modules.md) / api
+[@totalpave/sql-utils - v1.0.2](../README.md) / [Exports](../modules.md) / api
 
 # Module: api
 
