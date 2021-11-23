@@ -3,7 +3,6 @@ node_modules
 lib
 .*cache
 *.tsbuildinfo
-package-lock.json
 coverage
 .nyc_output
 *.tgz
