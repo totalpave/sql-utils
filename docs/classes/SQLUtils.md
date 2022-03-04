@@ -1,15 +1,13 @@
-[@totalpave/sql-utils - v1.0.2](../README.md) / [Exports](../modules.md) / [SQLUtils](../modules/SQLUtils.md) / SQLUtils
+[@totalpave/sql-utils - v1.0.2](../README.md) / [Exports](../modules.md) / SQLUtils
 
 # Class: SQLUtils
-
-[SQLUtils](../modules/SQLUtils.md).SQLUtils
 
 ## Table of contents
 
 ### Methods
 
-- [castToBoolean](SQLUtils.SQLUtils-1.md#casttoboolean)
-- [toDatetime](SQLUtils.SQLUtils-1.md#todatetime)
+- [castToBoolean](SQLUtils.md#casttoboolean)
+- [toDatetime](SQLUtils.md#todatetime)
 
 ## Methods
 
@@ -26,7 +24,7 @@ If the given value is null/undefined, then null is returned.
 
 | Name | Type |
 | :------ | :------ |
-| `value` | [`SQLBoolean`](../modules/SQLBoolean.md#sqlboolean) |
+| `value` | [`SQLBoolean`](../modules.md#sqlboolean) |
 
 #### Returns
 
@@ -34,7 +32,7 @@ If the given value is null/undefined, then null is returned.
 
 #### Defined in
 
-[SQLUtils.ts:49](https://github.com/totalpave/sql-utils/blob/6459c65/src/SQLUtils.ts#L49)
+[SQLUtils.ts:49](https://github.com/totalpave/sql-utils/blob/8aba028/src/SQLUtils.ts#L49)
 
 ___
 
@@ -54,4 +52,4 @@ ___
 
 #### Defined in
 
-[SQLUtils.ts:5](https://github.com/totalpave/sql-utils/blob/6459c65/src/SQLUtils.ts#L5)
+[SQLUtils.ts:5](https://github.com/totalpave/sql-utils/blob/8aba028/src/SQLUtils.ts#L5)
