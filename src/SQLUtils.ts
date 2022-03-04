@@ -7,22 +7,22 @@ export class SQLUtils {
             date = new Date(date);
         }
 
-        let month = date.getMonth() + 1;
+        let month = date.getUTCMonth() + 1;
         let monthString: string = month < 10 ? `0${month}` : month.toString();
 
-        let day = date.getDate();
+        let day = date.getUTCDate();
         let dayString: string = day < 10 ? `0${day}` : day.toString();
 
-        let hour = date.getHours();
+        let hour = date.getUTCHours();
         let hourString: string = hour < 10 ? `0${hour}` : hour.toString();
 
-        let minute = date.getMinutes();
+        let minute = date.getUTCMinutes();
         let minuteString: string = minute < 10 ? `0${minute}` : minute.toString();
 
-        let second = date.getSeconds();
+        let second = date.getUTCSeconds();
         let secondString: string = second < 10 ? `0${second}` : second.toString();
 
-        let ms: number = date.getMilliseconds();
+        let ms: number = date.getUTCMilliseconds();
         let msString: string = null;
         if (ms < 10) {
             msString = `00${ms}`;
