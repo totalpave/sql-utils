@@ -32,7 +32,7 @@ If the given value is null/undefined, then null is returned.
 
 #### Defined in
 
-[SQLUtils.ts:49](https://github.com/totalpave/sql-utils/blob/4b99827/src/SQLUtils.ts#L49)
+[SQLUtils.ts:49](https://github.com/totalpave/sql-utils/blob/d0093d9/src/SQLUtils.ts#L49)
 
 ___
 
@@ -52,4 +52,4 @@ ___
 
 #### Defined in
 
-[SQLUtils.ts:5](https://github.com/totalpave/sql-utils/blob/4b99827/src/SQLUtils.ts#L5)
+[SQLUtils.ts:5](https://github.com/totalpave/sql-utils/blob/d0093d9/src/SQLUtils.ts#L5)

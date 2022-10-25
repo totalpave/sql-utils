@@ -8,11 +8,11 @@
 
 - [SQLUtils](classes/SQLUtils.md)
 
-### Type aliases
+### Type Aliases
 
 - [SQLBoolean](modules.md#sqlboolean)
 
-## Type aliases
+## Type Aliases
 
 ### SQLBoolean
 
@@ -20,4 +20,4 @@
 
 #### Defined in
 
-[SQLBoolean.ts:2](https://github.com/totalpave/sql-utils/blob/4b99827/src/SQLBoolean.ts#L2)
+[SQLBoolean.ts:2](https://github.com/totalpave/sql-utils/blob/d0093d9/src/SQLBoolean.ts#L2)
