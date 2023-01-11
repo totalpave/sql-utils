@@ -1,6 +1,6 @@
-[@totalpave/sql-utils - v1.0.3](README.md) / Exports
+[@totalpave/sql-utils - v1.0.4](README.md) / Exports
 
-# @totalpave/sql-utils - v1.0.3
+# @totalpave/sql-utils - v1.0.4
 
 ## Table of contents
 
