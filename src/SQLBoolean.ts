@@ -1,2 +1,6 @@
 
-export type SQLBoolean = 0 | 1 | "0" | "1";
+/**
+ * @deprecated - Use `@totalpave/interfaces` instead
+ */
+export {SQLBoolean} from '@totalpave/interfaces';
+
