@@ -60,7 +60,7 @@ describe('SQLUtils', () => {
         }
 
         it('arbitrary strings simply return itself', () => {
-            expect(SQLUtils.castToBoolean(<any>"asdfadsf")).toBe("asdfadsf");
+            expect(SQLUtils.castToBoolean(("asdfadsf" as any))).toBe("asdfadsf");
         });
 
         it('null should be preserved', () => {
@@ -72,8 +72,8 @@ describe('SQLUtils', () => {
         });
 
         it('numbers other than 0 or 1 simply return itself', () => {
-            expect(SQLUtils.castToBoolean(<any>-123)).toBe(-123);
-            expect(SQLUtils.castToBoolean(<any>123)).toBe(123);
+            expect(SQLUtils.castToBoolean((-123 as any))).toBe(-123);
+            expect(SQLUtils.castToBoolean((123 as any))).toBe(123);
         });
     });
 });
