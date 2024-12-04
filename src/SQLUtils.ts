@@ -59,7 +59,6 @@ export class SQLUtils {
                 return null;
             default:
                 // Should never reach here, if you do, then you aren't conforming to API signature.
-                // eslint-disable-next-line no-console
                 console.warn('Unexpected default case reached while casting SQLBoolean to boolean');
                 return value;
         }
