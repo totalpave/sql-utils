@@ -76,4 +76,38 @@ describe('SQLUtils', () => {
             expect(SQLUtils.castToBoolean((123 as any))).toBe(123);
         });
     });
+
+    describe('toValue', () => {
+        it('null', () => {
+            expect(SQLUtils.toValue(null)).toBe('NULL');
+        });
+
+        it('undefined', () => {
+            expect(SQLUtils.toValue(undefined)).toBe('NULL');
+        });
+
+        it('number', () => {
+            expect(SQLUtils.toValue(123.45)).toBe('123.45');
+        });
+
+        it('false', () => {
+            expect(SQLUtils.toValue(false)).toBe('0');
+        });
+
+        it('true', () => {
+            expect(SQLUtils.toValue(true)).toBe('1');
+        });
+
+        it('string', () => {
+            expect(SQLUtils.toValue("test")).toBe('"test"');
+        });
+
+        it('string with double quotes', () => {
+            expect(SQLUtils.toValue("\"test\"")).toBe('"\\"test\\""');
+        });
+
+        it('Date', () => {
+            expect(SQLUtils.toValue(new Date(0))).toBe('1970-01-01 00:00:00.000');
+        });
+    });
 });

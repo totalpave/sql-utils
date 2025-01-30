@@ -2,6 +2,33 @@ import { SQLBoolean } from './SQLBoolean';
 
 export class SQLUtils {
     private constructor() {}
+
+    public static toValue(x: number | string | Date | boolean | null | undefined): string {
+        let out: string;
+
+        if (x === null || x === undefined) {
+            out = 'NULL';
+        }
+        else if (typeof x === 'string') {
+            out = JSON.stringify(x); // Handles escaping quotations if needed.
+        }
+        else if (x instanceof Date) {
+            out = SQLUtils.toDatetime(x);
+        }
+        else if (typeof x === 'boolean') {
+            out = x ? '1' : '0';
+        }
+        else if (typeof x === 'number') {
+            out = x.toString();
+        }
+        else {
+            // Should never reach here, if you do, then you aren't conforming to API signature.
+            throw new Error('Unhandled type in SQLUtils.toValue');
+        }
+
+        return out;
+    }
+
     public static toDatetime(date: Date): string {
         if (!(date instanceof Date)) {
             date = new Date(date);
