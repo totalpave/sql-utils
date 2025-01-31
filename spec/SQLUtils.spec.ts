@@ -107,7 +107,7 @@ describe('SQLUtils', () => {
         });
 
         it('Date', () => {
-            expect(SQLUtils.toValue(new Date(0))).toBe('1970-01-01 00:00:00.000');
+            expect(SQLUtils.toValue(new Date(0))).toBe('"1970-01-01 00:00:00.000"');
         });
     });
 });

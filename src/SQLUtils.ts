@@ -3,6 +3,26 @@ import { SQLBoolean } from './SQLBoolean';
 export class SQLUtils {
     private constructor() {}
 
+    /**
+     * Returns a "drop-in" string value of x. To be used to manually craft
+     * SQL queries without variable placeholder injections.
+     * 
+     * NOT TO BE USED BY UNTRUSTED INPUT. This method does not protect against
+     * SQL injections.
+     * 
+     * The conversions are as follows:
+     * 
+     * - null/undefined becomes NULL
+     * - strings becomes double-quoted strings (e.g.) 'string' becomes '"string"'
+     * - Date gets formatted using {@link toDatetime} and then gets double-quoted
+     * - Boolean becomes 1 for true, and 0 for false
+     * - Number gets passed through as a regular string.
+     * 
+     * Any other types is not supported and an error will be raised.
+     * 
+     * @param x 
+     * @returns 
+     */
     public static toValue(x: number | string | Date | boolean | null | undefined): string {
         let out: string;
 
@@ -13,7 +33,7 @@ export class SQLUtils {
             out = JSON.stringify(x); // Handles escaping quotations if needed.
         }
         else if (x instanceof Date) {
-            out = SQLUtils.toDatetime(x);
+            out = SQLUtils.toValue(SQLUtils.toDatetime(x)); // To double quote it for drop-in
         }
         else if (typeof x === 'boolean') {
             out = x ? '1' : '0';
