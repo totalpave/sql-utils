@@ -75,6 +75,16 @@ describe('SQLUtils', () => {
             expect(SQLUtils.castToBoolean((-123 as any))).toBe(-123);
             expect(SQLUtils.castToBoolean((123 as any))).toBe(123);
         });
+
+        describe('booleans', () => {
+            it('true', () => {
+                expect(SQLUtils.castToBoolean(true)).toBe(true);
+            });
+
+            it('false', () => {
+                expect(SQLUtils.castToBoolean(false)).toBe(false);
+            });
+        });
     });
 
     describe('toValue', () => {

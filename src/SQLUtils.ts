@@ -93,7 +93,7 @@ export class SQLUtils {
      * @param value 
      * @returns 
      */
-    public static castToBoolean(value: SQLBoolean): boolean {
+    public static castToBoolean(value: SQLBoolean | boolean): boolean {
         switch (value) {
             case 0:
             case "0":
@@ -101,6 +101,8 @@ export class SQLUtils {
             case 1:
             case "1":
                 return true;
+            case false: return false;
+            case true: return true;
             case null:
             case undefined:
                 return null;
