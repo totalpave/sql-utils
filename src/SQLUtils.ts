@@ -1,5 +1,8 @@
 import { SQLBoolean } from './SQLBoolean';
 
+/**
+ * Utility functions that are safe for both SQLite and MySQL.
+ */
 export class SQLUtils {
     private constructor() {}
 
@@ -49,39 +52,17 @@ export class SQLUtils {
         return out;
     }
 
+    /**
+     * 
+     * @param date 
+     * @returns Converts date to string. Currently uses ISO Strings. 
+     */
     public static toDatetime(date: Date): string {
         if (!(date instanceof Date)) {
             date = new Date(date);
         }
 
-        let month = date.getMonth() + 1;
-        let monthString: string = month < 10 ? `0${month}` : month.toString();
-
-        let day = date.getDate();
-        let dayString: string = day < 10 ? `0${day}` : day.toString();
-
-        let hour = date.getHours();
-        let hourString: string = hour < 10 ? `0${hour}` : hour.toString();
-
-        let minute = date.getMinutes();
-        let minuteString: string = minute < 10 ? `0${minute}` : minute.toString();
-
-        let second = date.getSeconds();
-        let secondString: string = second < 10 ? `0${second}` : second.toString();
-
-        let ms: number = date.getMilliseconds();
-        let msString: string = null;
-        if (ms < 10) {
-            msString = `00${ms}`;
-        }
-        else if (ms < 100) {
-            msString = `0${ms}`;
-        }
-        else {
-            msString = ms.toString();
-        }
-        
-        return `${date.getFullYear()}-${monthString}-${dayString} ${hourString}:${minuteString}:${secondString}.${msString}`;
+        return date.toISOString();
     }
 
     /**
